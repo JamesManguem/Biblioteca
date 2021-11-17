@@ -1,0 +1,19 @@
+
+<table class="table">
+  <thead class="table-dark">
+  <tr>
+    <th>Editorial</th>
+    <th>Pais</th>
+    <th>Telefono</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @editorials.each do |editorial| %> <tr>
+    <td><%= editorial.name %></td>
+    <td><%= editorial.country %></td>
+    <td><%= editorial.phone %></td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>

@@ -4,6 +4,7 @@
 #
 #  id          :integer          not null, primary key
 #  address     :string
+#  age         :integer
 #  name        :string
 #  observation :string
 #  phone       :string

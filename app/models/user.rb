@@ -4,6 +4,7 @@
 #
 #  id          :integer          not null, primary key
 #  address     :string
+#  age         :integer
 #  name        :string
 #  observation :string
 #  phone       :string
@@ -11,4 +12,6 @@
 #  updated_at  :datetime         not null
 #
 class User < ApplicationRecord
+  has_many :borrowings
+  has_many :books, through: :borrowings
 end

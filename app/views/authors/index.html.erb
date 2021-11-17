@@ -1,0 +1,19 @@
+
+
+<table class="table">
+  <thead class="table-dark">
+  <tr>
+    <th>Autor</th>
+    <th>Nacionalidad</th>
+    <th>Idioma</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @authors.each do |author| %> <tr>
+    <td><%= author.name %></td>
+    <td><%= author.nationality %></td>
+    <td><%= author.language %></td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>

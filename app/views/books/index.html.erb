@@ -10,6 +10,7 @@
     <th>Autor</th>
     <th>Categoría</th>
     <th>Editorial</th>
+    <th>Acciones</th>
   </tr>
   </thead>
   <tbody>
@@ -28,6 +29,7 @@
       <% unless book.editorial.nil? %>
         <td><%= book.editorial.name %></td>
       <% end %>
+      <td><%=link_to "Mostrar", action: 'show', id:book.id %></td>
     </tr>
   <% end %>
   </tbody>

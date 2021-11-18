@@ -5,6 +5,7 @@
     <th>Editorial</th>
     <th>Pais</th>
     <th>Telefono</th>
+    <th>Acciones</th>
   </tr>
   </thead>
 
@@ -13,6 +14,7 @@
     <td><%= editorial.name %></td>
     <td><%= editorial.country %></td>
     <td><%= editorial.phone %></td>
+    <td><%=link_to "Mostrar", action: 'show', id:editorial.id %></td>
   </tr>
   <% end %>
   </tbody>

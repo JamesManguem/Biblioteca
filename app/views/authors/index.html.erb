@@ -6,6 +6,7 @@
     <th>Autor</th>
     <th>Nacionalidad</th>
     <th>Idioma</th>
+    <th>Acciones</th>
   </tr>
   </thead>
   <tbody>
@@ -13,6 +14,7 @@
     <td><%= author.name %></td>
     <td><%= author.nationality %></td>
     <td><%= author.language %></td>
+    <td><%=link_to "Mostrar", action: 'show', id:author.id %></td>
   </tr>
   <% end %>
   </tbody>

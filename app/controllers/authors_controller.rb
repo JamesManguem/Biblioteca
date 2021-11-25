@@ -20,7 +20,22 @@ class AuthorsController < ApplicationController
   def show
   end
 
+  def edit
 
+  end
+
+  def update
+    @author.update(author_params)
+    redirect_to action: 'index'
+  end
+
+  def destroy
+
+
+    @author.destroy
+    redirect_to action: 'index'
+
+  end
 
   def find_author
     @author = Author.find(params[:id])

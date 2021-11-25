@@ -1,5 +1,5 @@
 
-
+<td><%=link_to "Agregar Autor", action: 'new' %></td>
 <table class="table">
   <thead class="table-dark">
   <tr>
@@ -7,6 +7,8 @@
     <th>Nacionalidad</th>
     <th>Idioma</th>
     <th>Acciones</th>
+    <th></th>
+    <th></th>
   </tr>
   </thead>
   <tbody>
@@ -15,6 +17,8 @@
     <td><%= author.nationality %></td>
     <td><%= author.language %></td>
     <td><%=link_to "Mostrar", action: 'show', id:author.id %></td>
+    <td><%=link_to "Editar", action: 'edit', id:author.id %></td>
+    <td><%=link_to "Borrar", {action: 'destroy', id:author.id}, method: :delete, data: {confirm: '¿Quieres borrar este autor?'}%></td>
   </tr>
   <% end %>
   </tbody>

@@ -1,0 +1,70 @@
+<%= form_with model: @book  do |form| %>
+
+  <br/>
+  <div class="container ">
+    <div class="card center-block">
+      <div class="card-header">
+        Datos del Libro
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Libro</h4>
+        <p class="card-text">
+
+
+        <div class="form-group">
+          <%= form.label :title, "Titulo:" %>
+          <%= form.text_field :title %>
+
+        </div>
+
+        <br/>
+        <div class="form-group">
+
+          <%= form.label :language, "Idioma:" %>
+          <%= form.text_field :language %>
+
+        </div>
+        <br/>
+        <div class="form-group">
+
+          <%= form.label :pages, "N° de paginas:" %>
+          <%= form.text_field :pages %>
+
+        </div>
+
+        <br/>
+        <div class="form-group">
+
+          <%= form.label :description, "Descripción:" %>
+          <%= form.text_field :description %>
+
+        </div>
+
+
+        <br/>
+
+        <div class="form-group">
+
+          <%= form.select :author, [:author] %>
+
+        </div>
+
+
+        <br/>
+        <div class="form-group">
+
+          <%= form.submit "Crear libro" %>
+
+        </div>
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+<% end %>
+
+

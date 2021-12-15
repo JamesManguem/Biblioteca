@@ -14,7 +14,7 @@
     <td><%= editorial.name %></td>
     <td><%= editorial.country %></td>
     <td><%= editorial.phone %></td>
-    <td><%=link_to "Mostrar", action: 'show', id:editorial.id %></td>
+    <td><%=link_to "Mostrar libros", editorial_books_path(editorial) %></td>
   </tr>
   <% end %>
   </tbody>

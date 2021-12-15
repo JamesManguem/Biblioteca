@@ -1,4 +1,5 @@
 class AuthorsController < ApplicationController
+  layout "layout_author"
   before_action :find_author, only: [:show, :edit, :update, :destroy]
 
   def new
@@ -15,6 +16,7 @@ class AuthorsController < ApplicationController
 
   def index
   @authors = Author.all
+  #render layout: "layout_author"
   end
 
   def show
@@ -26,7 +28,13 @@ class AuthorsController < ApplicationController
 
   def update
     @author.update(author_params)
-    redirect_to action: 'index'
+
+    if @author.update(author_params)
+      redirect_to action 'index'
+
+   else
+     render :edit
+    end
   end
 
   def destroy
